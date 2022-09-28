@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ComForm 表单 | vue2.7-qiankun-cli</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="XXXXXXX。">
+    
+    <link rel="preload" href="/vue2.7-qiankun-cli/assets/css/0.styles.fb4d40ae.css" as="style"><link rel="preload" href="/vue2.7-qiankun-cli/assets/js/app.904ae911.js" as="script"><link rel="preload" href="/vue2.7-qiankun-cli/assets/js/2.1a42b444.js" as="script"><link rel="preload" href="/vue2.7-qiankun-cli/assets/js/13.96c688ca.js" as="script"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/10.254d9091.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/11.8493d9de.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/12.0aaa8370.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/14.08ff76f7.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/15.241f9f10.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/16.0f01c8ef.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/17.4ef57b63.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/18.a2fcb36d.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/19.c5630316.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/20.d9524f3a.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/21.b8b50dca.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/22.6185f4b1.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/23.931d2e3b.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/24.ab04b1f7.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/25.d3aa29c0.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/26.4ed5b9bc.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/27.cc740b7c.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/28.0d50f886.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/29.becf1dc1.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/3.f1e892b8.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/30.995cada2.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/31.c6da786a.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/32.e560bc3b.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/33.9c867526.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/34.e781540a.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/35.aae61a5c.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/36.99f751a7.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/37.a2aba66f.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/38.7bc79847.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/4.83373024.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/5.6f035680.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/6.256830b0.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/7.b460697d.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/8.9f4900f1.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/9.e161732f.js">
+    <link rel="stylesheet" href="/vue2.7-qiankun-cli/assets/css/0.styles.fb4d40ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue2.7-qiankun-cli/" class="home-link router-link-active"><!----> <span class="site-name">vue2.7-qiankun-cli</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue2.7-qiankun-cli/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/components/" class="nav-link router-link-active">
+  功能组件
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/changLog/changLog.html" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="http://8.133.179.48:4000/dist" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  预览
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://192.168.169.57:9000/scm/git/hzt-webdocs.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue2.7-qiankun-cli/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/components/" class="nav-link router-link-active">
+  功能组件
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/changLog/changLog.html" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="http://8.133.179.48:4000/dist" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  预览
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://192.168.169.57:9000/scm/git/hzt-webdocs.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2.7-qiankun-cli/components/" aria-current="page" class="sidebar-link">介绍</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>全局组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2.7-qiankun-cli/components/svg-icon.html" class="sidebar-link">SvgIcon 图标</a></li><li><a href="/vue2.7-qiankun-cli/components/com-table.html" class="sidebar-link">ComTable 表格</a></li><li><a href="/vue2.7-qiankun-cli/components/com-form.html" aria-current="page" class="active sidebar-link">ComForm 表单</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#使用" class="sidebar-link">使用</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#attributes" class="sidebar-link">Attributes</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#schema" class="sidebar-link">Schema</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#options" class="sidebar-link">Options</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#optionsfield" class="sidebar-link">OptionsField</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#events" class="sidebar-link">Events</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#slot" class="sidebar-link">Slot</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/components/com-form.html#useform" class="sidebar-link">UseForm</a></li></ul></li><li><a href="/vue2.7-qiankun-cli/components/com-search.html" class="sidebar-link">ComSearch 查询</a></li><li><a href="/vue2.7-qiankun-cli/components/com-dialog.html" class="sidebar-link">ComDialog 弹窗</a></li><li><a href="/vue2.7-qiankun-cli/components/com-detail.html" class="sidebar-link">ComDetail 详情</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>普通组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2.7-qiankun-cli/components/echart.html" class="sidebar-link">Echart 图表</a></li><li><a href="/vue2.7-qiankun-cli/components/preview.html" class="sidebar-link">Preview 预览</a></li><li><a href="/vue2.7-qiankun-cli/components/avatars.html" class="sidebar-link">Avatars 头像组</a></li><li><a href="/vue2.7-qiankun-cli/components/highlight.html" class="sidebar-link">Highlight 文字高亮</a></li><li><a href="/vue2.7-qiankun-cli/components/editor.html" class="sidebar-link">Editor 富文本</a></li><li><a href="/vue2.7-qiankun-cli/components/qrcode.html" class="sidebar-link">Qrcode 二维码</a></li><li><a href="/vue2.7-qiankun-cli/components/timer.html" class="sidebar-link">Timer 计时器</a></li><li><a href="/vue2.7-qiankun-cli/components/marquee.html" class="sidebar-link">Marquee 无缝滚动</a></li><li><a href="/vue2.7-qiankun-cli/components/tree-select.html" class="sidebar-link">TreeSelect 下拉树</a></li><li><a href="/vue2.7-qiankun-cli/components/ellipsis.html" class="sidebar-link">Ellipsis 省略号</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="comform-表单"><a href="#comform-表单" class="header-anchor">#</a> ComForm 表单</h1> <p>对 <code>element-ui</code> 中的 <code>Form</code> 组件进行二次封装。</p> <p>数据渲染采用的是数据驱动，只需传入 <code>schema</code> 就可以进行最简单的数据展示。</p> <p><code>ComForm</code> 组件代码位于<code>src/components/ComForm</code></p> <h2 id="使用"><a href="#使用" class="header-anchor">#</a> 使用</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>com-form</span> <span class="token attr-name">:schema</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>formSchema<span class="token punctuation">&quot;</span></span> <span class="token attr-name">@register</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>register<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">setup</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token keyword">import</span> <span class="token punctuation">{</span> unref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@vue/composition-api'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> useForm <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'_h/web/useForm'</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> register<span class="token punctuation">,</span> formRef<span class="token punctuation">,</span> formData <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useForm</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> requiredRule<span class="token operator">:</span> <span class="token punctuation">{</span>
+  required<span class="token operator">:</span> boolean
+  message<span class="token operator">:</span> string
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  required<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  message<span class="token operator">:</span> <span class="token string">'该项为必填项'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> formSchema<span class="token operator">:</span> FormSchemaConfig<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field1'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'单选框'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Radio'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项1'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'1'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项2'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'2'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field2'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'单选框组'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'RadioGroup'</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项1'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'1'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项2'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'2'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field3'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'单选框组'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Checkbox'</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项1'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'1'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field4'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'多选框组'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'CheckboxGroup'</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项1'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'1'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项2'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'2'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field5'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'输入框'</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Input'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field6'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'输入框'</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Input'</span><span class="token punctuation">,</span>
+    componentProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">'textarea'</span><span class="token punctuation">,</span>
+      rows<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+      placeholder<span class="token operator">:</span> <span class="token string">'请输入内容'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field18'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Divider'</span><span class="token punctuation">,</span>
+    colProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      span<span class="token operator">:</span> <span class="token number">24</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field7'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'计数器'</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'InputNumber'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field8'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'选择器'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Select'</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项1'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'1'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'选项2'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'2'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field9'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'级联选择器'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Cascader'</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        value<span class="token operator">:</span> <span class="token string">'zhinan'</span><span class="token punctuation">,</span>
+        label<span class="token operator">:</span> <span class="token string">'指南'</span><span class="token punctuation">,</span>
+        children<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'shejiyuanze'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'设计原则'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'yizhi'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'一致'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'fankui'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'反馈'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'xiaolv'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'效率'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'kekong'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'可控'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'daohang'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'导航'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'cexiangdaohang'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'侧向导航'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'dingbudaohang'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'顶部导航'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        value<span class="token operator">:</span> <span class="token string">'zujian'</span><span class="token punctuation">,</span>
+        label<span class="token operator">:</span> <span class="token string">'组件'</span><span class="token punctuation">,</span>
+        children<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'basic'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Basic'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'layout'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Layout 布局'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'color'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Color 色彩'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'typography'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Typography 字体'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'icon'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Icon 图标'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'button'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Button 按钮'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'form'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Form'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'radio'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Radio 单选框'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'checkbox'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Checkbox 多选框'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'input'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Input 输入框'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'input-number'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'InputNumber 计数器'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'select'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Select 选择器'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'cascader'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Cascader 级联选择器'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'switch'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Switch 开关'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'slider'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Slider 滑块'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'time-picker'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'TimePicker 时间选择器'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'date-picker'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'DatePicker 日期选择器'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'datetime-picker'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'DateTimePicker 日期时间选择器'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'upload'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Upload 上传'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'rate'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Rate 评分'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'form'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Form 表单'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'data'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Data'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'table'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Table 表格'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'tag'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Tag 标签'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'progress'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Progress 进度条'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'tree'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Tree 树形控件'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'pagination'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Pagination 分页'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'badge'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Badge 标记'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'notice'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Notice'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'alert'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Alert 警告'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'loading'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Loading 加载'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'message'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Message 消息提示'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'message-box'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'MessageBox 弹框'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'notification'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Notification 通知'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'navigation'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Navigation'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'menu'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'NavMenu 导航菜单'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'tabs'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Tabs 标签页'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'breadcrumb'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Breadcrumb 面包屑'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'dropdown'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Dropdown 下拉菜单'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'steps'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Steps 步骤条'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'others'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Others'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'dialog'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Dialog 对话框'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'tooltip'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Tooltip 文字提示'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'popover'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Popover 弹出框'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'card'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Card 卡片'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'carousel'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Carousel 走马灯'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'collapse'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'Collapse 折叠面板'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        value<span class="token operator">:</span> <span class="token string">'ziyuan'</span><span class="token punctuation">,</span>
+        label<span class="token operator">:</span> <span class="token string">'资源'</span><span class="token punctuation">,</span>
+        children<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'axure'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Axure Components'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'sketch'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'Sketch Templates'</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'jiaohu'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'组件交互文档'</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field10'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'开关'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Switch'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field12'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'时间选择器'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'TimePicker'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field13'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'日期选择器'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'DatePicker'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field14'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'日期时间选择器'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'DatePicker'</span><span class="token punctuation">,</span>
+    componentProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> <span class="token string">'datetime'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field15'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'评分'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Rate'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field16'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'颜色选择器'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'ColorPicker'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field17'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'穿梭框'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'备选项1'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'1'</span><span class="token punctuation">,</span>
+        key<span class="token operator">:</span> <span class="token string">'1'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'备选项2'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'2'</span><span class="token punctuation">,</span>
+        key<span class="token operator">:</span> <span class="token string">'2'</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        label<span class="token operator">:</span> <span class="token string">'备选项3'</span><span class="token punctuation">,</span>
+        value<span class="token operator">:</span> <span class="token string">'3'</span><span class="token punctuation">,</span>
+        key<span class="token operator">:</span> <span class="token string">'3'</span><span class="token punctuation">,</span>
+        disabled<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'Transfer'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    field<span class="token operator">:</span> <span class="token string">'field19'</span><span class="token punctuation">,</span>
+    label<span class="token operator">:</span> <span class="token string">'下拉树'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> <span class="token string">'TreeSelect'</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        value<span class="token operator">:</span> <span class="token string">'zhinan'</span><span class="token punctuation">,</span>
+        label<span class="token operator">:</span> <span class="token string">'指南'</span><span class="token punctuation">,</span>
+        children<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> <span class="token string">'shejiyuanze'</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token string">'设计原则'</span><span class="token punctuation">,</span>
+            children<span class="token operator">:</span> <span class="token punctuation">[</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'yizhi'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'一致'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'fankui'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'反馈'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'xiaolv'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'效率'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span>
+              <span class="token punctuation">{</span>
+                value<span class="token operator">:</span> <span class="token string">'kekong'</span><span class="token punctuation">,</span>
+                label<span class="token operator">:</span> <span class="token string">'可控'</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    formItemProps<span class="token operator">:</span> <span class="token punctuation">{</span>
+      rules<span class="token operator">:</span> <span class="token punctuation">[</span>requiredRule<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">onChange</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+</code></pre></div><h2 id="attributes"><a href="#attributes" class="header-anchor">#</a> Attributes</h2> <div class="custom-block tip"><p class="custom-block-title">提示</p> <p>除以下参数外，官方文档内的 <code>Attributes</code> 都支持，具体可以参考 <a href="https://element.eleme.cn/#/zh-CN/component/form" target="_blank" rel="noopener noreferrer">element Form<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></div> <table><thead><tr><th>属性</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>schema</td> <td>布局展示的数据，具体项详见<a href="#Schema">下表</a></td> <td>array</td> <td>—</td> <td>[]</td></tr></tbody></table> <h2 id="schema"><a href="#schema" class="header-anchor">#</a> Schema<span id="Schema"></span></h2> <table><thead><tr><th>属性</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>field</td> <td>字段名</td> <td>string</td> <td>—</td> <td>—</td></tr> <tr><td>label</td> <td>标题</td> <td>string</td> <td>—</td> <td>—</td></tr> <tr><td>colProps</td> <td>el-col的props</td> <td>Object</td> <td>—</td> <td>—</td></tr> <tr><td>formItemProps</td> <td>form-item的props</td> <td>Object</td> <td>—</td> <td>—</td></tr> <tr><td>component</td> <td>组件名称</td> <td>Radio/RadioGroup/Checkbox/CheckboxGroup/Input/InputNumber/Select/Cascader/Switch/Slider/TimePicker/DatePicker/Rate/ColorPicker/Transfer/Divider/TreeSelect</td> <td>—</td> <td>—</td></tr> <tr><td>componentProps</td> <td>组件对应的props</td> <td>Object</td> <td>—</td> <td>—</td></tr> <tr><td>value</td> <td>值</td> <td>string/number/boolean/array/null</td> <td>—</td> <td>—</td></tr> <tr><td>options</td> <td>下拉项，具体项详见<a href="#Options">下表</a></td> <td>array</td> <td>—</td> <td>—</td></tr> <tr><td>optionsField</td> <td>下拉项别名，具体项详见<a href="#OptionsField">下表</a></td> <td>Object</td> <td>—</td> <td>—</td></tr> <tr><td>onChange</td> <td>change事件</td> <td>Function</td> <td>—</td> <td>—</td></tr> <tr><td>hidden</td> <td>是否隐藏</td> <td>boolean</td> <td>ture/false</td> <td>false</td></tr></tbody></table> <h2 id="options"><a href="#options" class="header-anchor">#</a> Options<span id="Options"></span></h2> <table><thead><tr><th>属性</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>label</td> <td>名称</td> <td>string</td> <td>—</td> <td>—</td></tr> <tr><td>value</td> <td>值</td> <td>string/number</td> <td>—</td> <td>—</td></tr> <tr><td>disabled</td> <td>是否禁用</td> <td>boolean</td> <td>ture/false</td> <td>false</td></tr> <tr><td>key</td> <td>唯一标识</td> <td>string</td> <td>—</td> <td>—</td></tr> <tr><td>children</td> <td>属性解构</td> <td>array</td> <td>—</td> <td>—</td></tr></tbody></table> <h2 id="optionsfield"><a href="#optionsfield" class="header-anchor">#</a> OptionsField<span id="OptionsField"></span></h2> <table><thead><tr><th>属性</th> <th>说明</th> <th>类型</th> <th>可选值</th> <th>默认值</th></tr></thead> <tbody><tr><td>labelField</td> <td>label别名</td> <td>string</td> <td>—</td> <td>—</td></tr> <tr><td>valueField</td> <td>value别名</td> <td>string</td> <td>—</td> <td>—</td></tr></tbody></table> <h2 id="events"><a href="#events" class="header-anchor">#</a> Events</h2> <table><thead><tr><th>事件名</th> <th>说明</th> <th>参数</th></tr></thead> <tbody><tr><td>register</td> <td>注册事件，可以配合useForm使用</td> <td>el, _this, data</td></tr></tbody></table> <h2 id="slot"><a href="#slot" class="header-anchor">#</a> Slot</h2> <table><thead><tr><th>name</th> <th>说明</th></tr></thead> <tbody><tr><td>—</td> <td>默认内容</td></tr> <tr><td>custom</td> <td>自定义内容</td></tr></tbody></table> <h2 id="useform"><a href="#useform" class="header-anchor">#</a> UseForm</h2> <table><thead><tr><th>事件名/属性</th> <th>类型</th> <th>说明</th> <th>参数</th></tr></thead> <tbody><tr><td>register</td> <td>Function</td> <td>注册事件，需要注册到Form组件的Events中</td> <td>el, _this, data</td></tr> <tr><td>formRef</td> <td>Object</td> <td>Form实例</td> <td>—</td></tr> <tr><td>formData</td> <td>Object</td> <td>表单数据</td> <td>—</td></tr> <tr><td>setProps</td> <td>Function</td> <td>用于修改schema中的对应属性</td> <td>(field: string, val: any, path: string)</td></tr> <tr><td>addSchema</td> <td>Function</td> <td>用于新增schema属性</td> <td>(formCong: FormSchemaConfig, index?: number)</td></tr> <tr><td>delSchema</td> <td>Function</td> <td>用于删除schema属性</td> <td>(index?: number)</td></tr> <tr><td>setValue</td> <td>Function</td> <td>用于设置表单值</td> <td>(field: string, value: FormValueType)</td></tr></tbody></table></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue2.7-qiankun-cli/components/com-table.html" class="prev">
+        ComTable 表格
+      </a></span> <span class="next"><a href="/vue2.7-qiankun-cli/components/com-search.html">
+        ComSearch 查询
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vue2.7-qiankun-cli/assets/js/app.904ae911.js" defer></script><script src="/vue2.7-qiankun-cli/assets/js/2.1a42b444.js" defer></script><script src="/vue2.7-qiankun-cli/assets/js/13.96c688ca.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mock 与联调 | vue2.7-qiankun-cli</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="XXXXXXX。">
+    
+    <link rel="preload" href="/vue2.7-qiankun-cli/assets/css/0.styles.fb4d40ae.css" as="style"><link rel="preload" href="/vue2.7-qiankun-cli/assets/js/app.904ae911.js" as="script"><link rel="preload" href="/vue2.7-qiankun-cli/assets/js/2.1a42b444.js" as="script"><link rel="preload" href="/vue2.7-qiankun-cli/assets/js/32.e560bc3b.js" as="script"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/10.254d9091.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/11.8493d9de.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/12.0aaa8370.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/13.96c688ca.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/14.08ff76f7.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/15.241f9f10.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/16.0f01c8ef.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/17.4ef57b63.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/18.a2fcb36d.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/19.c5630316.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/20.d9524f3a.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/21.b8b50dca.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/22.6185f4b1.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/23.931d2e3b.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/24.ab04b1f7.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/25.d3aa29c0.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/26.4ed5b9bc.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/27.cc740b7c.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/28.0d50f886.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/29.becf1dc1.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/3.f1e892b8.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/30.995cada2.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/31.c6da786a.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/33.9c867526.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/34.e781540a.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/35.aae61a5c.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/36.99f751a7.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/37.a2aba66f.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/38.7bc79847.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/4.83373024.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/5.6f035680.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/6.256830b0.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/7.b460697d.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/8.9f4900f1.js"><link rel="prefetch" href="/vue2.7-qiankun-cli/assets/js/9.e161732f.js">
+    <link rel="stylesheet" href="/vue2.7-qiankun-cli/assets/css/0.styles.fb4d40ae.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue2.7-qiankun-cli/" class="home-link router-link-active"><!----> <span class="site-name">vue2.7-qiankun-cli</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue2.7-qiankun-cli/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/components/" class="nav-link">
+  功能组件
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/changLog/changLog.html" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="http://8.133.179.48:4000/dist" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  预览
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://192.168.169.57:9000/scm/git/hzt-webdocs.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/vue2.7-qiankun-cli/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/components/" class="nav-link">
+  功能组件
+</a></div><div class="nav-item"><a href="/vue2.7-qiankun-cli/changLog/changLog.html" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="http://8.133.179.48:4000/dist" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  预览
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="http://192.168.169.57:9000/scm/git/hzt-webdocs.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2.7-qiankun-cli/guide/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/vue2.7-qiankun-cli/guide/quick-start.html" class="sidebar-link">快速上手</a></li><li><a href="/vue2.7-qiankun-cli/guide/configuration.html" class="sidebar-link">项目配置</a></li><li><a href="/vue2.7-qiankun-cli/guide/router.html" class="sidebar-link">路由配置和侧边栏</a></li><li><a href="/vue2.7-qiankun-cli/guide/mock.html" aria-current="page" class="active sidebar-link">Mock 与联调</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/guide/mock.html#mock" class="sidebar-link">Mock</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/guide/mock.html#axios" class="sidebar-link">Axios</a></li><li class="sidebar-sub-header"><a href="/vue2.7-qiankun-cli/guide/mock.html#api管理" class="sidebar-link">Api管理</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2.7-qiankun-cli/guide/standard.html" class="sidebar-link">项目规范</a></li><li><a href="/vue2.7-qiankun-cli/guide/style.html" class="sidebar-link">风格指南</a></li><li><a href="/vue2.7-qiankun-cli/guide/role.html" class="sidebar-link">权限配置</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>webpack5指南</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue2.7-qiankun-cli/guide/webpack.html" class="sidebar-link">webpack入门教学</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="mock-与联调"><a href="#mock-与联调" class="header-anchor">#</a> Mock 与联调</h1> <h2 id="mock"><a href="#mock" class="header-anchor">#</a> Mock</h2> <p>本项目中的接口采用的是<code>Mock.js</code>配合<code>axios</code>进行接口对接模拟，默认是所有环境下都开启<code>mock</code>。如需不需要，可以删除<code>src/main.ts</code>中引入<code>mock</code>的代码。</p> <p>具体配置代码可查看<code>src/mock/index.ts</code></p> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>自定义<code>mock</code>接口的时候，可能会出现跨域的问题，这时候开发者可以自行在<code>config/index.js/</code>中的<code>dev.proxyTable</code>进行代理，之后重新运行项目即可。</p> <p>Mock的模拟请求，在浏览器中是看不到请求记录的，这点也是一个弊端，开发者只能通过代码打印的形式去查看返回的结果，后续考虑还有没有更优的方案。</p></div> <p><code>mock</code>接口的写法可参考<code>src/mock/example/index.ts</code></p> <div class="language-javaScript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> Mock <span class="token keyword">from</span> <span class="token string">'mockjs'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> toAnyString <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'_u'</span>
+
+<span class="token keyword">let</span> List<span class="token operator">:</span> any<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token number">100</span>
+
+<span class="token keyword">const</span> baseContent <span class="token operator">=</span>
+  <span class="token string">'&lt;p&gt;I am testing data, I am testing data.&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://wpimg.wallstcn.com/4c69009c-0fd4-4153-b112-6cb53d1cf943&quot;&gt;&lt;/p&gt;'</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> count<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  List<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    Mock<span class="token punctuation">.</span><span class="token function">mock</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      id<span class="token operator">:</span> <span class="token function">toAnyString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token comment">// timestamp: +Mock.Random.date('T'),</span>
+      author<span class="token operator">:</span> <span class="token string">'@first'</span><span class="token punctuation">,</span>
+      title<span class="token operator">:</span> <span class="token string">'@title(5, 10)'</span><span class="token punctuation">,</span>
+      content<span class="token operator">:</span> baseContent<span class="token punctuation">,</span>
+      importance<span class="token operator">:</span> <span class="token string">'@integer(1, 3)'</span><span class="token punctuation">,</span>
+      display_time<span class="token operator">:</span> <span class="token string">'@datetime'</span><span class="token punctuation">,</span>
+      pageviews<span class="token operator">:</span> <span class="token string">'@integer(300, 5000)'</span>
+      <span class="token comment">// image_uri</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">[</span>
+  <span class="token comment">// 列表接口</span>
+  <span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn/example/list'</span><span class="token punctuation">,</span>
+    type<span class="token operator">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">response</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">config<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> title<span class="token punctuation">,</span> pageIndex<span class="token punctuation">,</span> pageSize <span class="token punctuation">}</span> <span class="token operator">=</span> config<span class="token punctuation">.</span>query
+
+      <span class="token keyword">const</span> mockList <span class="token operator">=</span> List<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>title <span class="token operator">&amp;&amp;</span> item<span class="token punctuation">.</span>title<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">false</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token keyword">const</span> pageList <span class="token operator">=</span> mockList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span>
+        <span class="token punctuation">(</span><span class="token parameter">item<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+          index <span class="token operator">&lt;</span> pageSize <span class="token operator">*</span> pageIndex <span class="token operator">&amp;&amp;</span> index <span class="token operator">&gt;=</span> pageSize <span class="token operator">*</span> <span class="token punctuation">(</span>pageIndex <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      <span class="token punctuation">)</span>
+
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        code<span class="token operator">:</span> <span class="token string">'0000'</span><span class="token punctuation">,</span>
+        data<span class="token operator">:</span> <span class="token punctuation">{</span>
+          total<span class="token operator">:</span> mockList<span class="token punctuation">.</span>length<span class="token punctuation">,</span>
+          list<span class="token operator">:</span> pageList
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 删除接口</span>
+  <span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn/example/delete'</span><span class="token punctuation">,</span>
+    type<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">response</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">config<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> ids <span class="token operator">=</span> config<span class="token punctuation">.</span>body<span class="token punctuation">.</span>ids
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>ids<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          code<span class="token operator">:</span> <span class="token string">'500'</span><span class="token punctuation">,</span>
+          message<span class="token operator">:</span> <span class="token string">'请选择需要删除的数据'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> i <span class="token operator">=</span> List<span class="token punctuation">.</span>length
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>ids<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>List<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            List<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          code<span class="token operator">:</span> <span class="token string">'0000'</span><span class="token punctuation">,</span>
+          data<span class="token operator">:</span> <span class="token string">'success'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 详情接口</span>
+  <span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn/example/detail'</span><span class="token punctuation">,</span>
+    type<span class="token operator">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">response</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">config<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> <span class="token punctuation">{</span> id <span class="token punctuation">}</span> <span class="token operator">=</span> config<span class="token punctuation">.</span>query
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> example <span class="token keyword">of</span> List<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>example<span class="token punctuation">.</span>id <span class="token operator">===</span> id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            code<span class="token operator">:</span> <span class="token string">'0000'</span><span class="token punctuation">,</span>
+            data<span class="token operator">:</span> example
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">// 保存接口</span>
+  <span class="token punctuation">{</span>
+    url<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn/example/save'</span><span class="token punctuation">,</span>
+    type<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">response</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">config<span class="token operator">:</span> any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> data <span class="token operator">=</span> config<span class="token punctuation">.</span>body
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>data<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        List <span class="token operator">=</span> <span class="token punctuation">[</span>
+          Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            id<span class="token operator">:</span> <span class="token function">toAnyString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            importance<span class="token operator">:</span> <span class="token function">Number</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>importance<span class="token punctuation">)</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>List<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          code<span class="token operator">:</span> <span class="token string">'0000'</span><span class="token punctuation">,</span>
+          data<span class="token operator">:</span> <span class="token string">'success'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        List<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span>id <span class="token operator">===</span> data<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">in</span> item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>key <span class="token operator">===</span> <span class="token string">'importance'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                item<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+              <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                item<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> data<span class="token punctuation">[</span>key<span class="token punctuation">]</span>
+              <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          code<span class="token operator">:</span> <span class="token string">'0000'</span><span class="token punctuation">,</span>
+          data<span class="token operator">:</span> <span class="token string">'success'</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+
+</code></pre></div><h2 id="axios"><a href="#axios" class="header-anchor">#</a> Axios</h2> <p>本项目中的所有接口请求都是基于<a href="https://github.com/axios/axios" target="_blank" rel="noopener noreferrer">axios.js<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>来进行的。</p> <p>为了便于后期的维护，本项目中对<code>axios</code>进行了二次封装，从而可以对接口请求进行统一拦截。</p> <h3 id="配置项"><a href="#配置项" class="header-anchor">#</a> 配置项</h3> <p>同时，可供了一些<code>axios</code>的全局配置，具体代码<code>src/axios-config/config.ts</code>，开发者可自行更改扩展。</p> <div class="language-typeScript extra-class"><pre class="language-typescript"><code><span class="token comment">/**
+ * request全局配置
+ */</span>
+
+<span class="token keyword">const</span> config<span class="token operator">:</span> <span class="token punctuation">{</span>
+  base_url<span class="token operator">:</span> <span class="token punctuation">{</span>
+    base<span class="token operator">:</span> <span class="token builtin">string</span>
+    dev<span class="token operator">:</span> <span class="token builtin">string</span>
+    pro<span class="token operator">:</span> <span class="token builtin">string</span>
+    test<span class="token operator">:</span> <span class="token builtin">string</span>
+  <span class="token punctuation">}</span>
+  result_code<span class="token operator">:</span> <span class="token builtin">number</span> <span class="token operator">|</span> <span class="token builtin">string</span>
+  default_headers<span class="token operator">:</span>
+    <span class="token operator">|</span> <span class="token string">'application/json'</span>
+    <span class="token operator">|</span> <span class="token string">'application/x-www-form-urlencoded'</span>
+    <span class="token operator">|</span> <span class="token string">'multipart/form-data'</span>
+  request_timeout<span class="token operator">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">/**
+   * api请求基础路径
+   */</span>
+  base_url<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 开发环境接口前缀</span>
+    base<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn'</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 打包开发环境接口前缀</span>
+    dev<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn'</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 打包生产环境接口前缀</span>
+    pro<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn'</span><span class="token punctuation">,</span>
+
+    <span class="token comment">// 打包测试环境接口前缀</span>
+    test<span class="token operator">:</span> <span class="token string">'http://mockjs.test.cn'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 接口成功返回状态码
+   */</span>
+  result_code<span class="token operator">:</span> <span class="token string">'0000'</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 接口请求超时时间
+   */</span>
+  request_timeout<span class="token operator">:</span> <span class="token number">60000</span><span class="token punctuation">,</span>
+
+  <span class="token comment">/**
+   * 默认接口请求类型
+   * 可选值：application/x-www-form-urlencoded multipart/form-data
+   */</span>
+  default_headers<span class="token operator">:</span> <span class="token string">'application/json'</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> config
+</code></pre></div><h3 id="请求方法"><a href="#请求方法" class="header-anchor">#</a> 请求方法</h3> <p>为了便于维护，本项目中对所有请求方式的接口进行封装，开发者只需要参数对应参数即可使用如<code>get</code>、<code>post</code>请求。</p> <p>具体代码<code>src/axios-config/index.ts</code>，开发者可自行更改扩展。</p> <div class="language-typeScript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> request <span class="token keyword">from</span> <span class="token string">'./request'</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> appStore <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/store/modules/app'</span>
+
+<span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">'./config'</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> AxiosPromise<span class="token punctuation">,</span> ResponseType <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'axios'</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> default_headers <span class="token punctuation">}</span> <span class="token operator">=</span> config
+
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">Config</span> <span class="token punctuation">{</span>
+  params<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span>
+  data<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">any</span>
+  url<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+  method<span class="token operator">?</span><span class="token operator">:</span> <span class="token string">'get'</span> <span class="token operator">|</span> <span class="token string">'post'</span> <span class="token operator">|</span> <span class="token string">'delete'</span> <span class="token operator">|</span> <span class="token string">'put'</span>
+  headersType<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">string</span>
+  responseType<span class="token operator">?</span><span class="token operator">:</span> ResponseType
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token punctuation">,</span>
+  method<span class="token punctuation">,</span>
+  params<span class="token punctuation">,</span>
+  data<span class="token punctuation">,</span>
+  headersType<span class="token punctuation">,</span>
+  responseType
+<span class="token punctuation">}</span><span class="token operator">:</span> Config<span class="token punctuation">)</span><span class="token operator">:</span> AxiosPromise <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token operator">:</span> url<span class="token punctuation">,</span>
+    method<span class="token punctuation">,</span>
+    params<span class="token operator">:</span> appStore<span class="token punctuation">.</span>requestTime
+      <span class="token operator">?</span> <span class="token punctuation">{</span> time<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">...</span><span class="token punctuation">(</span>params <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>
+      <span class="token operator">:</span> params<span class="token punctuation">,</span>
+    data<span class="token punctuation">,</span>
+    responseType<span class="token operator">:</span> responseType<span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'Content-Type'</span><span class="token operator">:</span> headersType <span class="token operator">||</span> default_headers
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> fetch
+
+</code></pre></div><h3 id="请求拦截"><a href="#请求拦截" class="header-anchor">#</a> 请求拦截</h3> <p>具体代码<code>src/axios-config/request.ts</code>，开发者可自行更改扩展。</p> <div class="language-typeScript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> axios<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  AxiosInstance<span class="token punctuation">,</span>
+  AxiosRequestConfig<span class="token punctuation">,</span>
+  AxiosResponse<span class="token punctuation">,</span>
+  AxiosError
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'axios'</span>
+
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ElMessage <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'_c/Message'</span>
+
+<span class="token keyword">import</span> qs <span class="token keyword">from</span> <span class="token string">'qs'</span>
+
+<span class="token keyword">import</span> config <span class="token keyword">from</span> <span class="token string">'./config'</span>
+
+<span class="token keyword">const</span> <span class="token punctuation">{</span> result_code<span class="token punctuation">,</span> base_url <span class="token punctuation">}</span> <span class="token operator">=</span> config
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token constant">PATH_URL</span><span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> base_url<span class="token punctuation">[</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">API_CURENV</span> <span class="token keyword">as</span> <span class="token builtin">string</span><span class="token punctuation">]</span>
+
+<span class="token comment">// 创建axios实例</span>
+<span class="token keyword">const</span> service<span class="token operator">:</span> AxiosInstance <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  baseURL<span class="token operator">:</span> <span class="token constant">PATH_URL</span><span class="token punctuation">,</span> <span class="token comment">// api 的 base_url</span>
+  timeout<span class="token operator">:</span> config<span class="token punctuation">.</span>request_timeout <span class="token comment">// 请求超时时间</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// request拦截器</span>
+service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span>config<span class="token operator">:</span> AxiosRequestConfig<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      config<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'post'</span> <span class="token operator">&amp;&amp;</span>
+      config<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'Content-Type'</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'application/x-www-form-urlencoded'</span>
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      config<span class="token punctuation">.</span>data <span class="token operator">=</span> qs<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// get参数编码</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>method <span class="token operator">===</span> <span class="token string">'get'</span> <span class="token operator">&amp;&amp;</span> config<span class="token punctuation">.</span>params<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">let</span> url <span class="token operator">=</span> config<span class="token punctuation">.</span>url <span class="token keyword">as</span> <span class="token builtin">string</span>
+      url <span class="token operator">+=</span> <span class="token string">'?'</span>
+      <span class="token keyword">const</span> keys <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>params<span class="token punctuation">)</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> key <span class="token keyword">of</span> keys<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>config<span class="token punctuation">.</span>params<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token keyword">void</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> config<span class="token punctuation">.</span>params<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          url <span class="token operator">+=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>params<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;</span><span class="token template-punctuation string">`</span></span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      url <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> url<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+      config<span class="token punctuation">.</span>params <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+      config<span class="token punctuation">.</span>url <span class="token operator">=</span> url
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>error<span class="token operator">:</span> AxiosError<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Do something with request error</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token comment">// for debug</span>
+    <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// response 拦截器</span>
+service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span>response<span class="token operator">:</span> AxiosResponse<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>config<span class="token punctuation">.</span>responseType <span class="token operator">===</span> <span class="token string">'blob'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 如果是文件流，直接过</span>
+      <span class="token keyword">return</span> response
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>code <span class="token operator">===</span> result_code<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> response<span class="token punctuation">.</span>data
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      ElMessage<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">(</span>error<span class="token operator">:</span> AxiosError<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'err'</span> <span class="token operator">+</span> error<span class="token punctuation">)</span> <span class="token comment">// for debug</span>
+    ElMessage<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span>message<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token builtin">Promise</span><span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> service
+
+</code></pre></div><h2 id="api管理"><a href="#api管理" class="header-anchor">#</a> Api管理</h2> <p>在之前，我一直在纠结，<code>api</code>接口到底是集中管理，还是分模块各自管理，在之后的几个公司项目的实践中，在项目越来越大，一个模块有可能调用了几十个接口，那这时候在集中管理<code>api</code>，会导致<code>api</code>的来源不明确，不利于查找对应<code>api</code>接口。所以现在比较偏向分模块进行<code>api</code>管理，这样更便于后期的维护，各模块只关心和维护模块中使用的<code>api</code>接口。</p> <div class="language-typeScript extra-class"><pre class="language-typescript"><code><span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">'@/axios-config'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">loginApi</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> data <span class="token punctuation">}</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">'/user/login'</span><span class="token punctuation">,</span> method<span class="token operator">:</span> <span class="token string">'post'</span><span class="token punctuation">,</span> data <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">getRoleDetApi</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> params <span class="token punctuation">}</span><span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token operator">:</span> <span class="token string">'/role/detail'</span><span class="token punctuation">,</span> method<span class="token operator">:</span> <span class="token string">'get'</span><span class="token punctuation">,</span> params <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue2.7-qiankun-cli/guide/router.html" class="prev">
+        路由配置和侧边栏
+      </a></span> <span class="next"><a href="/vue2.7-qiankun-cli/guide/standard.html">
+        项目规范
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/vue2.7-qiankun-cli/assets/js/app.904ae911.js" defer></script><script src="/vue2.7-qiankun-cli/assets/js/2.1a42b444.js" defer></script><script src="/vue2.7-qiankun-cli/assets/js/32.e560bc3b.js" defer></script>
+  </body>
+</html>
