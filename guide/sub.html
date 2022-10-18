@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>子应用 | 起源微前端框架</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="基于qiankun2.0搭建且集成完善的的微前端框架。">
+    
+    <link rel="preload" href="/microapp-cli-doc/assets/css/0.styles.343cdc68.css" as="style"><link rel="preload" href="/microapp-cli-doc/assets/js/app.2205cd9d.js" as="script"><link rel="preload" href="/microapp-cli-doc/assets/js/2.1820f25c.js" as="script"><link rel="preload" href="/microapp-cli-doc/assets/js/16.9bff667e.js" as="script"><link rel="prefetch" href="/microapp-cli-doc/assets/js/10.99b87fa0.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/11.539a687d.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/12.f5d358fc.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/13.31b7ef17.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/14.ca0cd0fe.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/15.432074c3.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/3.65eebaeb.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/4.83373024.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/5.6f035680.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/6.256830b0.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/7.9bfacd8a.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/8.7d52eb87.js"><link rel="prefetch" href="/microapp-cli-doc/assets/js/9.e06f98ad.js">
+    <link rel="stylesheet" href="/microapp-cli-doc/assets/css/0.styles.343cdc68.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/microapp-cli-doc/" class="home-link router-link-active"><!----> <span class="site-name">起源微前端框架</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/microapp-cli-doc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/microapp-cli-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/microapp-cli-doc/changLog/changLog.html" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="http://192.168.169.57:9000/scm/git/hzt-webdocs.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/microapp-cli-doc/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/microapp-cli-doc/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/microapp-cli-doc/changLog/changLog.html" class="nav-link">
+  更新日志
+</a></div><div class="nav-item"><a href="http://192.168.169.57:9000/scm/git/hzt-webdocs.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/microapp-cli-doc/guide/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/microapp-cli-doc/guide/quick-start.html" class="sidebar-link">快速上手</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>进阶</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/microapp-cli-doc/guide/microapp.html" class="sidebar-link">微应用路由配置</a></li><li><a href="/microapp-cli-doc/guide/main.html" class="sidebar-link">主应用</a></li><li><a href="/microapp-cli-doc/guide/sub.html" aria-current="page" class="active sidebar-link">子应用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/microapp-cli-doc/guide/sub.html#项目配置" class="sidebar-link">项目配置</a></li><li class="sidebar-sub-header"><a href="/microapp-cli-doc/guide/sub.html#webpack配置" class="sidebar-link">webpack配置</a></li><li class="sidebar-sub-header"><a href="/microapp-cli-doc/guide/sub.html#子应用的路由配置" class="sidebar-link">子应用的路由配置</a></li></ul></li><li><a href="/microapp-cli-doc/guide/router.html" class="sidebar-link">侧边栏配置</a></li><li><a href="/microapp-cli-doc/guide/nginx.html" class="sidebar-link">部署配置</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="子应用"><a href="#子应用" class="header-anchor">#</a> 子应用</h1> <h2 id="项目配置"><a href="#项目配置" class="header-anchor">#</a> 项目配置</h2> <p>首先子应用有一个唯一的<strong>子应用名称</strong>作为识别这个子应用的唯一标识。</p> <p>这里package.json 的name 属性需要改为<strong>子应用名称</strong> <code>apps\MicoAppOne\package.json [1-2]</code></p> <div class="language-javaScript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+  <span class="token string">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;MicoAppOne&quot;</span><span class="token punctuation">,</span>
+  <span class="token string">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;v0.0.1&quot;</span><span class="token punctuation">,</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>为了确保，当前子应用的vue实例挂载在属于这个子应用对应的容器里。
+public目前下的index.html 的 vue容器的id 需要改为 <code>${子应用名称}-app</code> 的格式。
+在<code>mian.ts</code>的render方法中，会将vue实例挂载到id为<code>${子应用名称}-app</code>的容器中
+<code>apps\MicoAppOne\public\index.html [17-17]</code></p> <div class="language-javaScript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">&quot;MicoAppOne-app&quot;</span><span class="token operator">&gt;</span>
+  <span class="token operator">...</span>
+</code></pre></div><div class="language-javaScript extra-class"><pre class="language-javascript"><code><span class="token comment">// main.ts</span>
+<span class="token keyword">function</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">props <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> container <span class="token operator">=</span> <span class="token punctuation">(</span>props <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>container
+  instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    router<span class="token punctuation">,</span>
+    store<span class="token punctuation">,</span>
+    <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">h</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span>container <span class="token operator">?</span> container<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#MicoAppOne-app'</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token string">'#MicoAppOne-app'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="webpack配置"><a href="#webpack配置" class="header-anchor">#</a> webpack配置</h2> <p>由于qiankun的是通过读取子应用以库的形式导出的入口文件，且要求输出类型为umd(兼容性强)。所以在子应用的webpack的output属性配置时修改 <code>apps\MicoAppOne\build\webpack.base.conf.js [44-66]</code></p> <div class="language-javaScript extra-class"><pre class="language-javascript"><code> output<span class="token operator">:</span> <span class="token punctuation">{</span>
+    library<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">-[name]</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    libraryTarget<span class="token operator">:</span> <span class="token string">'umd'</span><span class="token punctuation">,</span> <span class="token comment">// 把微应用打包成 umd 库格式</span>
+    <span class="token operator">...</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>注意，qiankun通过import-html-entry引入子应用时，只会读取子应用以库的形式导出的入口文件。所以切记，这里不要做分包（webpack的splitChunks）!!</p></div> <h2 id="子应用的路由配置"><a href="#子应用的路由配置" class="header-anchor">#</a> 子应用的路由配置</h2> <p>首先子应用模板中，在获取路由的方法中。会先判断当前环境是否在qiankun环境下。如果是，则会通过permissionStore.generateRoutes的方法从sessionStorage中获取路由。
+子应用的permissionStore.generateRoutes会根据子应用名称对路由数据做过滤，只留下当前子应用说包含的路由。</p> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>注意，包含在子应用下的路由和子路由，他们的路由名称（这里是code属性）必须以子应用名称开头。这样在主应用和其他应用响应urlChange时，才能分辨当前url是不是属于本子应用的。</p></div> <div class="language-javaScript extra-class"><pre class="language-javascript"><code> <span class="token comment">// apps\MicoAppOne\src\permission.ts [34-39]</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span>isMicroApp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    permissionStore<span class="token punctuation">.</span><span class="token function">generateRoutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      router<span class="token punctuation">.</span><span class="token function">addRoutes</span><span class="token punctuation">(</span>permissionStore<span class="token punctuation">.</span>addRouters<span class="token punctuation">)</span> <span class="token comment">// 动态添加可访问路由表</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    permissionStore<span class="token punctuation">.</span><span class="token function">setIsAddRouters</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><div class="language-javaScript extra-class"><pre class="language-javascript"><code> <span class="token comment">// apps\MicoAppOne\src\store\modules\permission.ts [72-94]</span>
+  <span class="token keyword">public</span> <span class="token function">generateRoutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> Promise<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 路由权限控制</span>
+      <span class="token keyword">let</span> routerMap<span class="token operator">:</span> RouteConfig<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token keyword">const</span> dataMenus <span class="token operator">=</span>
+        wsCache<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'dataMenus'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">?.</span>children<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">item</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">.</span>code <span class="token operator">===</span> appStore<span class="token punctuation">.</span>microAppName<span class="token punctuation">)</span>
+          <span class="token operator">?.</span>children <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+      <span class="token keyword">const</span> routes <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          url<span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+          component<span class="token operator">:</span> <span class="token string">'#'</span><span class="token punctuation">,</span>
+          redirect<span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>dataMenus<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">?.</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+          code<span class="token operator">:</span> <span class="token string">'Root'</span><span class="token punctuation">,</span>
+          noTagsView<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          children<span class="token operator">:</span> dataMenus<span class="token punctuation">,</span>
+          alwaysShow<span class="token operator">:</span> <span class="token boolean">false</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+      routerMap <span class="token operator">=</span> <span class="token function">getFilterRoutes</span><span class="token punctuation">(</span>routes<span class="token punctuation">)</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token constant">SET_ROUTERS</span><span class="token punctuation">(</span>routerMap<span class="token punctuation">)</span>
+      <span class="token function">resolve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+</code></pre></div><p>另外，在qiankun的使用中。可以通过<code>(window as any).__POWERED_BY_QIANKUN__</code>来判断，当前环境是否在qiankun环境下。
+但在qiankun环境下时，要注意vue-router的实例中，需要配置base属性为<code>\${子应用名称}\</code>，来进行正确的路由跳转。</p> <div class="language-javaScript extra-class"><pre class="language-javascript"><code><span class="token comment">// apps\MicoAppOne\src\router\index.ts [119-123]</span>
+
+<span class="token keyword">const</span> createRouter<span class="token operator">:</span> <span class="token function-variable function">any</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+<span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mode<span class="token operator">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span> <span class="token comment">// require service support</span>
+  base<span class="token operator">:</span> <span class="token punctuation">(</span>window <span class="token keyword">as</span> any<span class="token punctuation">)</span><span class="token punctuation">.</span>__POWERED_BY_QIANKUN__ <span class="token operator">?</span> <span class="token string">'/MicoAppOne/'</span> <span class="token operator">:</span> <span class="token string">'/'</span><span class="token punctuation">,</span>
+  routes<span class="token operator">:</span> constantRouterMap
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/microapp-cli-doc/guide/main.html" class="prev">
+        主应用
+      </a></span> <span class="next"><a href="/microapp-cli-doc/guide/router.html">
+        侧边栏配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/microapp-cli-doc/assets/js/app.2205cd9d.js" defer></script><script src="/microapp-cli-doc/assets/js/2.1820f25c.js" defer></script><script src="/microapp-cli-doc/assets/js/16.9bff667e.js" defer></script>
+  </body>
+</html>
